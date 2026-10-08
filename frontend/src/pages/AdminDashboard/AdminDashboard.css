@@ -1,0 +1,84 @@
+/* تنسيقات المعلم والإدارة */
+.student-row-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  margin-bottom: 8px;
+}
+
+.st-perf {
+  display: block;
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.status-badge.present { background: #ECFDF5; color: #059669; }
+.status-badge.absent { background: #FEF2F2; color: #DC2626; }
+
+.teacher-live-control {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.live-status-icon { font-size: 3.5rem; }
+
+.danger { background: #EF4444 !important; }
+
+.teacher-hw-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.teacher-hw-form input, .teacher-hw-form textarea, .admin-content-box textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* الإدارة */
+.admin-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.stat-card h4 { margin: 0; color: #64748B; font-size: 0.9rem; }
+.stat-card h2 { margin: 6px 0; color: #8B3A2B; font-size: 2rem; }
+.stat-card span { font-size: 0.8rem; color: #10B981; }
+
+.admin-content-box {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 24px;
+  border-radius: 12px;
+}

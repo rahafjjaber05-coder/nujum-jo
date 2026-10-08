@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Global Theme Settings - Nujum Education Platform (نظام التصميم الفاخر)
+   ========================================================================== */
+:root {
+  /* درجات الأصفر الذهبي المستوحاة من النجمة السبعية المضيئة */
+  --star-gold-pure: #FFD700;
+  --star-gold-bright: #FFC000;
+  --star-gold-deep: #D4AF37;
+  --star-gold-glow: #FFA500;
+  --star-gold-light: #FFF5AA;
+  
+  /* الألوان السيادية الوطنية الأردنية */
+  --jordan-black: #080B10;
+  --jordan-dark-blue: #0E1420;
+  --jordan-card-bg: rgba(18, 25, 38, 0.75);
+  --jordan-red: #CE1126;
+  --jordan-green: #007A3D;
+
+  /* الحدود والظلال الزجاجية Mudar / Glassmorphism */
+  --glass-border: rgba(255, 215, 0, 0.22);
+  --glass-border-hover: rgba(255, 215, 0, 0.6);
+  --gold-glow-shadow: 0 0 20px rgba(255, 215, 0, 0.35);
+  --gold-glow-shadow-intense: 0 0 35px rgba(255, 192, 0, 0.65);
+
+  /* النصوص والقيم */
+  --text-main: #FFFFFF;
+  --text-muted: #A0AEC0;
+}
+
+/* ==========================================================================
+   Base Layout & Animated Radial Background
+   ========================================================================== */
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 50% 10%, #172133 0%, var(--jordan-black) 85%);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Advanced Glass Panels & Hover Animations
+   ========================================================================== */
+.glass-panel {
+  background: var(--jordan-card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.8), var(--gold-glow-shadow);
+  transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   Interactive Radiant Gold Buttons (أزرار النجمة الذهبية المضيئة)
+   ========================================================================== */
+.gold-btn-glow {
+  position: relative;
+  background: linear-gradient(135deg, var(--star-gold-light) 0%, var(--star-gold-pure) 50%, var(--star-gold-glow) 100%);
+  color: #05070A;
+  font-weight: 800;
+  font-size: 0.98rem;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 14px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: var(--gold-glow-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* حركة اللمعة الضوئية المتدفقة فوق الزر */
+.gold-btn-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.6) 50%, transparent 70%);
+  transform: rotate(30deg);
+  animation: starShimmer 4s infinite linear;
+}
+
+.gold-btn-glow:hover {
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: var(--gold-glow-shadow-intense);
+}
+
+.gold-btn-glow:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   Special Badges & Animated Indicators
+   ========================================================================== */
+.gold-text {
+  color: var(--star-gold-pure) !important;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+}
+
+.card-badge {
+  background: linear-gradient(90deg, var(--star-gold-pure), var(--star-gold-glow));
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.star-sparkle {
+  display: inline-block;
+  animation: starPulse 2s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   Keyframe Animations (التحريك والأنيميشن التفاعلي)
+   ========================================================================== */
+@keyframes starShimmer {
+  0% { transform: translateX(-150%) rotate(30deg); }
+  100% { transform: translateX(150%) rotate(30deg); }
+}
+
+@keyframes starPulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px var(--star-gold-pure)); }
+  50% { transform: scale(1.25); filter: drop-shadow(0 0 12px var(--star-gold-glow)); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+/* ==========================================================================
+   Sidebar & Jordanian Sovereign Touches
+   ========================================================================== */
+.sidebar {
+  border-left: 1px solid var(--glass-border);
+  position: relative;
+}
+
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--jordan-black) 0%, var(--jordan-red) 50%, var(--jordan-green) 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(206, 17, 38, 0.3);
+}

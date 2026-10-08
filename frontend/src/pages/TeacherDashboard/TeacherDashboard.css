@@ -1,0 +1,271 @@
+.student-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0D1117;
+  color: #FFFFFF;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  direction: rtl;
+  overflow: hidden;
+}
+
+.student-navbar {
+  background: #161B22;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.25);
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.star-icon {
+  font-size: 1.6rem;
+}
+
+.brand-box h3 {
+  margin: 0;
+  color: #FFD700;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.brand-box span {
+  font-size: 0.75rem;
+  color: #8B949E;
+}
+
+.audio-controls-box {
+  background: rgba(255, 215, 0, 0.08);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  color: #FFD700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.audio-controls-box input[type="range"] {
+  accent-color: #FFD700;
+  cursor: pointer;
+}
+
+.exit-btn {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #EF4444;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.student-workspace {
+  display: flex;
+  flex: 1;
+  padding: 15px;
+  gap: 15px;
+  overflow: hidden;
+}
+
+.student-sidebar {
+  width: 270px;
+  background: #161B22;
+  border: 1px solid #30363D;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+}
+
+.section-block h4 {
+  margin: 0 0 10px 0;
+  color: #FFD700;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #30363D;
+  padding-bottom: 6px;
+}
+
+.mini-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mini-list li {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.83rem;
+  color: #C9D1D9;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mini-list li:hover {
+  background: rgba(255, 215, 0, 0.12);
+  color: #FFD700;
+}
+
+.stats-box p {
+  margin: 4px 0;
+  font-size: 0.85rem;
+  color: #8B949E;
+}
+
+.stats-box strong {
+  color: #FFD700;
+}
+
+.student-center-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.camera-3d-viewport {
+  flex: 1;
+  background: #161B22;
+  border: 2px dashed rgba(255, 215, 0, 0.35);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.live-tag {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: rgba(255, 215, 0, 0.12);
+  color: #FFD700;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.virtual-screen-placeholder span {
+  font-size: 1.2rem;
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.virtual-screen-placeholder p {
+  color: #8B949E;
+  font-size: 0.88rem;
+  margin-top: 5px;
+}
+
+.three-options-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.opt-btn {
+  background: #161B22;
+  border: 1px solid #30363D;
+  color: #C9D1D9;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.opt-btn.active, .opt-btn:hover {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: #FFD700;
+  color: #FFD700;
+}
+
+.dynamic-panel-box {
+  background: #161B22;
+  border: 1px solid #30363D;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.chat-box-content, .files-box-content, .camera-box-content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.chat-box-content input, .section-block input, .section-block textarea {
+  flex: 1;
+  background: #0D1117;
+  border: 1px solid #30363D;
+  padding: 9px 12px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+}
+
+.send-gold-btn {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #0D1117;
+  border: none;
+  font-weight: bold;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.call-control-btn {
+  margin-top: 15px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.start-call {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #0D1117;
+}
+
+.end-call {
+  background: #EF4444;
+  color: #FFFFFF;
+}
+
+.announcement-board {
+  background: #161B22;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.announcement-board h4 {
+  margin: 0 0 5px 0;
+  color: #FFD700;
+  font-size: 0.9rem;
+}
+
+.announcement-board p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #E6EDF3;
+}

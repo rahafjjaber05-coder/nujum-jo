@@ -1,0 +1,128 @@
+/* التنسيق العام للهيكل والـ Navbar */
+.web-app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0D1117;
+  color: #FFFFFF;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  direction: rtl;
+}
+
+.global-web-navbar {
+  background: #161B22;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.25);
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  color: #FFD700;
+  font-weight: 800;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-welcome strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #E6EDF3;
+}
+
+.user-welcome span {
+  font-size: 0.78rem;
+  color: #8B949E;
+}
+
+.volume-slider-box {
+  background: rgba(255, 215, 0, 0.08);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  color: #FFD700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.web-logout-btn {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #EF4444;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.global-workspace-container {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* الألواح الجانبية والبطاقات */
+.web-sidebar-panel, .web-viewport-card, .stat-card, .admin-content-box {
+  background: #161B22;
+  border: 1px solid #30363D;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.web-sidebar-panel {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.web-center-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.web-viewport-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 215, 0, 0.3);
+}
+
+/* الأزرار الذهبية الرئيسية */
+.stage-btn-primary {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #0D1117;
+  border: none;
+  font-weight: 800;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.25);
+  transition: all 0.2s ease;
+}
+
+.stage-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.danger {
+  background: #EF4444 !important;
+  color: #FFFFFF !important;
+}
+
+/* إحصائيات الإدارة بالذهبي */
+.stat-card h2 {
+  color: #FFD700 !important;
+  font-size: 2.2rem;
+  margin: 6px 0;
+}

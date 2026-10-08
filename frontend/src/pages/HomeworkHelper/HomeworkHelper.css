@@ -1,0 +1,52 @@
+.homework-master-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  min-height: 100vh;
+}
+.top-hw-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+}
+.hw-header-title h2 { margin: 0; color: #FFF; font-size: 1.2rem; }
+.hw-header-title span { font-size: 0.8rem; color: var(--text-muted); }
+
+.hw-content-grid {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+}
+.hw-input-panel, .hw-solution-panel {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.hw-input-panel textarea {
+  height: 150px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  color: #FFF;
+  padding: 12px;
+  border-radius: 10px;
+  outline: none;
+}
+.hw-action-buttons {
+  display: flex;
+  gap: 12px;
+}
+.upload-btn-label {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed var(--star-gold-pure);
+  color: #FFF;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.sol-explanation { color: var(--star-gold-light); font-weight: bold; }
+.sol-steps li { color: #FFF; margin-bottom: 6px; }

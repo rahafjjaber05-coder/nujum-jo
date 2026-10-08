@@ -1,0 +1,305 @@
+/* تنسيق الشاشة الرئيسية لتسجيل الدخول بنظام القسمين */
+.auth-split-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0b0f19;
+  font-family: 'Cairo', sans-serif;
+  overflow: hidden;
+}
+
+/* القسم الأيمن: البانر والصورة الترويجية الأصلية من مجلد public */
+.auth-left-banner {
+  flex: 1;
+  background: url('/hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding: 40px;
+  text-align: center;
+}
+
+.banner-content {
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+.star-mascot-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.big-star-icon {
+  font-size: 54px;
+  animation: bounceStar 2s infinite ease-in-out;
+}
+
+.mascot-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.banner-main-text {
+  font-size: 38px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.3;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+}
+
+/* القسم الأيسر: نموذج الدخول */
+.auth-right-form-section {
+  flex: 1;
+  background-color: #121824;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 50px;
+  overflow-y: auto;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* شريط التحكم العلوي (القارئ الصوتي + تغيير اللغة) */
+.top-bar-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 12px;
+}
+
+.audio-reader-btn, .lang-switch-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.audio-reader-btn:hover, .lang-switch-btn:hover {
+  background: rgba(255, 204, 0, 0.15);
+  color: #ffcc00;
+  border-color: rgba(255, 204, 0, 0.3);
+}
+
+.audio-reader-btn.reading-active {
+  background: #ffcc00;
+  color: #0b0f19;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+  animation: pulseButton 1.5s infinite;
+}
+
+/* تنسيق الشعار المتحرك أعلى نموذج الدخول */
+.form-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.floating-star-badge {
+  font-size: 28px;
+  background: rgba(255, 204, 0, 0.15);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+  animation: bounceStar 2s infinite ease-in-out;
+}
+
+.brand-name-title {
+  font-size: 20px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-wrapper {
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login-header-text h2 {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.login-header-text p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+/* أزرار تبديل الأدوار */
+.role-tabs {
+  display: flex;
+  background: #1a2234;
+  padding: 5px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  gap: 5px;
+}
+
+.role-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-tab.active {
+  background: #ffcc00;
+  color: #0b0f19;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
+/* حقول الإدخال */
+.actual-login-form .input-group {
+  margin-bottom: 15px;
+}
+
+.actual-login-form label {
+  display: block;
+  font-size: 13px;
+  color: #ffcc00;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.actual-login-form input[type="text"],
+.actual-login-form input[type="password"] {
+  width: 100%;
+  padding: 11px 15px;
+  background-color: #1a2234;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.actual-login-form input:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+}
+
+/* خيارات تذكرني ونسيت كلمة المرور */
+.form-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 18px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.remember-me input {
+  accent-color: #ffcc00;
+}
+
+.forgot-link {
+  color: #ffcc00;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* زر الدخول الرئيسي */
+.submit-login-btn {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  border: none;
+  border-radius: 10px;
+  color: #0b0f19;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+}
+
+.submit-login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
+}
+
+.signup-prompt {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.signup-prompt a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* أنيميشن الحركات */
+@keyframes bounceStar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 900px) {
+  .auth-split-container {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .auth-left-banner {
+    display: none;
+  }
+  .auth-right-form-section {
+    padding: 20px;
+  }
+}
